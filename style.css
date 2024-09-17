@@ -1,174 +1,88 @@
-/* Reset and Box-Sizing */
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-/* Global Styles */
-body {
-  font-family: system-ui;
-  background-color: #efefef;
-  line-height: 1.6; /* Improves readability */
-  margin: 0; /* Ensure there's no extra space around the body */
-}
+  body {
+    font-family: system-ui;
+    background-color: #efefef;
 
-/* Header */
-header {
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #29213f;
-}
+  }
 
-header ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-around; /* Distribute menu items evenly */
-  flex-wrap: wrap; /* Make the menu wrap on smaller screens */
-  padding: 0;
-}
+  header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #29213f;
+  }
 
-header a {
-  color: inherit;
-  text-decoration: none;
-  font-style: normal;
-}
+  header ul {
+    list-style: none;
+  }
 
-header a:hover {
-  margin: 1rem auto;
-}
+  header a {
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+  }
 
-/* Typography */
-h1 {
-  text-align: center;
-  color: orangered;
-  text-decoration: underline;
-  margin: 1rem;
-  font-size: 2rem;
-}
+  header a:hover {
+    margin: 1rem auto;
+  }
 
-h2 {
-  text-align: left;
-  color: orangered;
-  margin: 1%;
-  text-decoration: underline;
-  font-size: 1.5rem;
-}
+  h1{
+    text-align: center;
+    color: orangered;
+    text-decoration: underline;
+    margin: 1rem;
+  }
 
-/* Main Content */
-main {
-  margin: 1rem 2rem;
-}
+  h2{
+    text-align: left;
+    color: orangered;
+    margin: 1%;
+    text-decoration: underline;
+  }
 
-/* Sections */
-section {
-  margin-bottom: 1rem;
-}
+  main{
+    margin: 1rem 2rem;
+  }
 
-p {
-  max-width: 80ch;
-  font-size: 1rem; /* Ensures text is readable across devices */
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
+  section{
+    margin-bottom: 1rem;
+  }
 
-section li h3 {
-  font-size: 1rem; /* Use more readable font size */
-  letter-spacing: 0.5px;
-}
+  p {
+    max-width: 80ch;
+  }
 
-section li p {
-  font-size: 1rem; /* Use more readable font size */
-  letter-spacing: 0.5px;
-}
+  section li h3{
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+  }
 
-section li {
-  margin: 0.5rem 0;
-}
+  section li p {
+    font-size: .8rem;
+    letter-spacing: 0.5px;
+  }
 
-/* Images */
-img {
-  border-radius: 1rem;
-  border: 3px solid #333;
-}
+  section li{
+    margin: .5rem;
+  }
 
-/* Responsive Image with Object Fit */
+  img {
+    border-radius: 1rem; /* Rounds corners */
+    border: 3px solid #333; /* Border */
+  }
+
 .with-object-fit {
-  margin: 0 auto; /* Center in container */
-  width: 100%; /* Limits image width relative to parent */
-  max-width: 200px; /* Maximum width of the container */
-  height: 200px; /* Fixed height of the container */
-}
-
-.with-object-fit img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image covers the container */
-  object-position: right;
-}
-
-/* Responsive Layout for Different Screens */
-@media (max-width: 768px) {
-  /* Adjust main margin for tablets and smaller */
-  main {
-      margin: 1rem;
+    margin: 0 auto; /* Center in container */
+    width: 100%; /* Limits image width realtive to parent */
+    max-width: 200px; /* Maximum width of the container */
+    height: 200px; /* Fixed height of the container */
   }
 
-  /* Make h1 and h2 smaller for tablets */
-  h1 {
-      font-size: 1.8rem;
+.with-object-fit img{
+    width: 100%;
+    height: 100%;
+    object-position: right;
   }
-
-  h2 {
-      font-size: 1.3rem;
-  }
-
-  /* Improve spacing and font-size for paragraphs */
-  p {
-      font-size: 0.9rem;
-  }
-
-  /* Adjust header layout on smaller screens */
-  header ul {
-      flex-direction: column; /* Stack menu items vertically */
-      text-align: center;
-  }
-
-  /* Adjust width of images on smaller screens */
-  .with-object-fit {
-      max-width: 150px; /* Reduce image width */
-      height: 150px; /* Reduce image height */
-  }
-}
-
-@media (max-width: 480px) {
-  /* Further adjustments for mobile */
-  h1 {
-      font-size: 1.5rem;
-  }
-
-  h2 {
-      font-size: 1.1rem;
-  }
-
-  /* Reduce padding and margins for mobile screens */
-  main {
-      margin: 0.5rem;
-  }
-
-  /* Center-align text for better readability on smaller screens */
-  p {
-      text-align: justify;
-      font-size: 0.85rem;
-  }
-
-  /* Stack header items vertically */
-  header ul {
-      flex-direction: column;
-  }
-
-  /* Image container for mobile */
-  .with-object-fit {
-      max-width: 120px;
-      height: 120px;
-  }
-}
